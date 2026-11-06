@@ -29,6 +29,8 @@ Leave the footer line in place while the demo is up: “Concept demo for Chamele
 
 Public facts only: address, phone, hours (HappyKava), an approximate rating (~4.7 from 200+ Google and HappyKava reviews), menu highlights, weekly events, and the social handles below. No invented prices, awards, or testimonials.
 
+The story block also uses what the owner said on the lounge TikTok: sober lounge, smoke and vape shop with a drive-thru, blush stucco exterior, Simonis pool tables, karaoke, a game lounge, a kids’ crafts corner, locally and female-owned, and bar tops she refinished herself. The weekly hours table stays the HappyKava listing, which is more specific than a single 7 AM–2 AM line.
+
 - Instagram: [@chameleonkavalounge](https://www.instagram.com/chameleonkavalounge/)
 - TikTok: [@chameleon.brevard](https://www.tiktok.com/@chameleon.brevard)
 

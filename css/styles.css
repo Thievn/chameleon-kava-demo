@@ -26,16 +26,17 @@
 }
 
 :root {
-  --bg: #101612;
-  --bg-raise: #17211c;
-  --ink: #14201a;
-  --cream: #f3ecdf;
-  --cream-soft: #e7dfd0;
-  --paper: #f4efe4;
-  --gold: #e0b15c;
-  --gold-deep: #6b4718;
-  --text-dim: #c9c0b0;
-  --line: rgba(243, 236, 223, 0.14);
+  --bg: #12110f;
+  --bg-raise: #1a2e26;
+  --ink: #1a1614;
+  --cream: #f7efe9;
+  --cream-soft: #eadfd8;
+  --paper: #f8e8e4;
+  --blush: #f3d4ce;
+  --gold: #e0c17a;
+  --gold-deep: #6e3d32;
+  --text-dim: #d4c4bc;
+  --line: rgba(247, 239, 233, 0.14);
   --serif: "Fraunces", "Iowan Old Style", Palatino, Georgia, serif;
   --sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
   --nav-h: 72px;
@@ -52,14 +53,14 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--nav-h);
-  scrollbar-color: #3d4e44 var(--bg);
+  scrollbar-color: #4a3b36 var(--bg);
 }
 
 body {
   margin: 0;
   background:
-    radial-gradient(900px 480px at 100% -10%, rgba(224, 177, 92, 0.08), transparent 55%),
-    radial-gradient(700px 520px at -10% 18%, rgba(47, 138, 86, 0.16), transparent 50%),
+    radial-gradient(900px 480px at 100% -10%, rgba(231, 183, 176, 0.16), transparent 55%),
+    radial-gradient(760px 540px at -12% 16%, rgba(31, 107, 69, 0.28), transparent 52%),
     var(--bg);
   color: var(--cream);
   font-family: var(--sans);
@@ -217,7 +218,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(16, 22, 18, 0.94);
+  background: rgba(18, 17, 15, 0.94);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(243, 236, 223, 0.06);
 }
@@ -229,7 +230,7 @@ a {
   right: 0;
   bottom: 0;
   height: 2px;
-  background: linear-gradient(90deg, #1c7a44, #e0b15c, #8ed4ae, #e0b15c, #1c7a44);
+  background: linear-gradient(90deg, #e7b7b0, #e0c17a, #1f6b45, #e0c17a, #e7b7b0);
   background-size: 220% 100%;
   animation: shift 16s linear infinite;
 }
@@ -256,8 +257,8 @@ a {
 }
 
 .brand img {
-  width: 48px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   flex: none;
 }
 
@@ -430,14 +431,14 @@ a {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #a89880;
-  box-shadow: 0 0 0 4px rgba(168, 152, 128, 0.18);
+  background: #c4a484;
+  box-shadow: 0 0 0 4px rgba(196, 164, 132, 0.2);
   flex: none;
 }
 
 .status[data-state="open"] .dot {
-  background: #8fd0a8;
-  box-shadow: 0 0 0 4px rgba(143, 208, 168, 0.18);
+  background: #3d9a62;
+  box-shadow: 0 0 0 4px rgba(61, 154, 98, 0.2);
 }
 
 .hero-media {
@@ -461,7 +462,7 @@ a {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(to top, #101612 0%, rgba(16, 22, 18, 0.08) 32%, rgba(16, 22, 18, 0) 58%);
+  background: linear-gradient(to top, #12110f 0%, rgba(18, 17, 15, 0.08) 32%, rgba(18, 17, 15, 0) 58%);
 }
 
 .photo-tag {
@@ -472,7 +473,7 @@ a {
   margin: 0;
   padding: 6px 10px;
   border-radius: 999px;
-  background: #101612;
+  background: #12110f;
   color: var(--cream);
   font-size: 0.72rem;
   font-weight: 600;
@@ -481,14 +482,20 @@ a {
 }
 
 .statement {
-  padding: clamp(52px, 8vw, 96px) 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  padding: clamp(48px, 7vw, 84px) 0;
+  background: var(--blush);
+  color: var(--ink);
+}
+
+.stucco-grid {
+  display: grid;
+  gap: 28px;
+  align-items: center;
 }
 
 .statement-kicker {
   margin: 0 0 12px;
-  color: var(--gold);
+  color: var(--gold-deep);
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -498,6 +505,7 @@ a {
 .statement-line {
   margin: 0;
   max-width: 11em;
+  color: var(--ink);
   font-family: var(--serif);
   font-size: clamp(2.4rem, 7vw, 4.6rem);
   font-weight: 640;
@@ -508,7 +516,59 @@ a {
 .statement-line em {
   font-style: italic;
   font-weight: 520;
+  color: #145c40;
+}
+
+.awning {
+  background: #2c3036;
+  color: var(--cream);
+  border-radius: 4px 4px 14px 14px;
+  padding: 18px 18px 16px;
+  text-align: center;
+  box-shadow: 0 8px 0 #23262b;
+}
+
+.awning-name,
+.awning-sub,
+.window-line {
+  margin: 0;
+}
+
+.awning-name {
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  font-weight: 640;
+  letter-spacing: 0.12em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.awning-sub {
+  margin-top: 6px;
   color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.window-line {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 14px;
+  color: #145c40;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.hours-note {
+  margin: 8px 0 0;
+  max-width: 28ch;
+  color: var(--text-dim);
+  font-size: 0.98rem;
 }
 
 .band {
@@ -560,7 +620,7 @@ h2 {
   content: "";
   position: absolute;
   inset: 14px 0 0 14px;
-  border: 1px solid rgba(224, 177, 92, 0.55);
+  border: 1px solid rgba(176, 122, 74, 0.75);
   border-radius: 18px;
 }
 
@@ -673,7 +733,7 @@ h2 {
 .deal {
   padding: 16px 16px 18px;
   border-radius: 16px;
-  background: #14201a;
+  background: #13261f;
   color: var(--cream);
 }
 
@@ -931,7 +991,7 @@ h2 {
     position: fixed;
     inset: 0;
     overflow: auto;
-    background: #101612;
+    background: #12110f;
   }
 
   .js .nav.is-open .nav-bar {
@@ -1042,10 +1102,15 @@ h2 {
   }
 
   .visit-grid,
-  .about-grid {
+  .about-grid,
+  .stucco-grid {
     grid-template-columns: 1.05fr 0.95fr;
     gap: 56px;
     align-items: center;
+  }
+
+  .stucco-grid {
+    grid-template-columns: 1.15fr 0.85fr;
   }
 
   .visit-grid {
@@ -1098,10 +1163,10 @@ h2 {
   .hero-media::after {
     background: linear-gradient(
       90deg,
-      #101612 0%,
-      rgba(16, 22, 18, 0.55) 16%,
-      rgba(16, 22, 18, 0.05) 42%,
-      rgba(16, 22, 18, 0.28) 100%
+      #12110f 0%,
+      rgba(18, 17, 15, 0.55) 16%,
+      rgba(18, 17, 15, 0.05) 42%,
+      rgba(18, 17, 15, 0.28) 100%
     );
   }
 
@@ -1123,7 +1188,7 @@ h2 {
   }
 
   .btn-gold:hover {
-    background: #ebc27a;
+    background: #edd09a;
   }
 
   .btn-ghost:hover {
@@ -1134,7 +1199,7 @@ h2 {
   .text-link:hover,
   .footer-links a:hover,
   .phone-link:hover {
-    color: #f0d7a2;
+    color: #f3ddb0;
   }
 
   .hero-copy > * {
