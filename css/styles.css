@@ -289,16 +289,29 @@ a {
   flex: none;
 }
 
+.nav-actions .btn-small,
+.nav-toggle {
+  box-sizing: border-box;
+  height: 44px;
+  min-height: 44px;
+  padding: 0 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
 .nav-toggle {
   display: none;
-  min-height: 44px;
-  padding: 0 14px;
-  border: 1px solid rgba(243, 236, 223, 0.35);
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(243, 236, 223, 0.38);
   border-radius: 999px;
   background: transparent;
   color: var(--cream);
-  font: inherit;
-  font-weight: 500;
+  font-family: inherit;
   cursor: pointer;
 }
 
@@ -981,6 +994,8 @@ h2 {
 @media (max-width: 979px) {
   .js .nav-toggle {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .js .nav-links {
